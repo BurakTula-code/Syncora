@@ -1,0 +1,34 @@
+{
+  "name": "syncora-play",
+  "version": "1.0.0",
+  "description": "Syncora Play Senkronizasyon",
+  "main": "main.js",
+  "author": "Burak",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.syncora.play",
+    "productName": "Syncora Play",
+    "win": {
+      "icon": "build/icon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerSidebar": "build/installer.bmp",
+      "uninstallerSidebar": "build/uninstaller.bmp"
+    }
+  }
+}
